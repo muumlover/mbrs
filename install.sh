@@ -1,10 +1,11 @@
 apt update
-apt install zip python-pip libcurl4-openssl-dev libc6 -y
+apt install libcurl4-openssl-dev libc6 python-pip zip -y
 pip install supervisor
+apt install supervisor -y
 
 echo 'deb http://ftp.debian.org/debian/ buster main' >> /etc/apt/sources.list
 apt update
-apt -t buster install libc6
+apt -t buster install libc6 -y
 
 mkdir mcbrs
 cd mcbrs
